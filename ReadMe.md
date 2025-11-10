@@ -39,11 +39,17 @@ sudo docker-compose up -d --build
 ```
 
 🌐 Access
+
 URL	Description
-http://<VM_IP>/	React frontend
+
+http://<VM_IP>/	React frontend 
+
 http://<VM_IP>/api/hello	Backend API
+
 http://<VM_IP>/agent/ask?query=Hello	AI agent
+
 http://<VM_IP>/agent/health	Agent health check
+
 
 🧠 Data Persistence
 Service	Path	Persistent
