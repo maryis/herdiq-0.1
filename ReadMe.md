@@ -27,13 +27,16 @@ sudo usermod -aG docker $USER && newgrp docker
 Create persistent data directories
 sudo mkdir -p /var/lib/postgres-data /var/lib/chroma-data
 sudo chmod -R 777 /var/lib/postgres-data /var/lib/chroma-data
+```
 
 ### 2️⃣ Configure environment
 
 Edit .env with your OpenAI key and DB credentials.
 
 ### 3️⃣ Build and start everything
+```
 sudo docker-compose up -d --build
+```
 
 🌐 Access
 URL	Description
