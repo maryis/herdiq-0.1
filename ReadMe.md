@@ -24,9 +24,31 @@ This is a **ready-to-deploy** full-stack AI startup template, designed for a **s
 sudo apt update && sudo apt install -y docker.io docker-compose
 sudo usermod -aG docker $USER && newgrp docker
 
+Create persistent data directories
+sudo mkdir -p /var/lib/postgres-data /var/lib/chroma-data
+sudo chmod -R 777 /var/lib/postgres-data /var/lib/chroma-data
+
+### 2️⃣ Configure environment
+
+Edit .env with your OpenAI key and DB credentials.
+
+### 3️⃣ Build and start everything
+sudo docker-compose up -d --build
+
+🌐 Access
+URL	Description
+http://<VM_IP>/	React frontend
+http://<VM_IP>/api/hello	Backend API
+http://<VM_IP>/agent/ask?query=Hello	AI agent
+http://<VM_IP>/agent/health	Agent health check
+
+🧠 Data Persistence
+Service	Path	Persistent
+PostgreSQL	/var/lib/postgres-data	✅
+Chroma	/var/lib/chroma-data
 
 
-
+-----
 
 **Deploying on Google Cloud Run**
 
