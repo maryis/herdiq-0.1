@@ -4,4 +4,4 @@ langchain
 openai
 chromadb
 psycopg2-binary
-supabase-py
+supabase
