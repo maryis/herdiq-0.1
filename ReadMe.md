@@ -1,3 +1,33 @@
+# 🚀 AI Startup - All-in-One Stack (React + Node + FastAPI + Postgres + Chroma + Nginx)
+
+This is a **ready-to-deploy** full-stack AI startup template, designed for a **single Google Cloud VM** using Docker Compose.
+
+---
+
+## 🧩 Components
+
+| Service | Port | Description |
+|----------|------|-------------|
+| frontend | 80 (via nginx) | React web app |
+| backend | 4000 | Node.js API |
+| agent | 8000 | Python FastAPI AI service |
+| postgres | 5432 | Main database |
+| chroma | 8001 | Local vector DB |
+| nginx | 80 | Reverse proxy + static hosting |
+
+---
+
+## ⚙️ Setup
+
+### 1️⃣ Install Docker on your VM
+```bash
+sudo apt update && sudo apt install -y docker.io docker-compose
+sudo usermod -aG docker $USER && newgrp docker
+
+
+
+
+
 **Deploying on Google Cloud Run**
 
 1️⃣ Create Cloud SQL (MySQL) and Cloud Storage bucket
