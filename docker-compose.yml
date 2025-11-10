@@ -6,7 +6,6 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     container_name: frontend
-    # React build will be served by Nginx, no need for exposed port
     depends_on:
       - backend
       - agent
@@ -63,7 +62,7 @@ services:
       - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./frontend/build:/usr/share/nginx/html:ro  # serve React build
+      - ./frontend/build:/usr/share/nginx/html:ro
     depends_on:
       - frontend
       - backend
