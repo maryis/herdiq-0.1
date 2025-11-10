@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+langchain
+openai
+chromadb
+psycopg2-binary
+supabase-py
